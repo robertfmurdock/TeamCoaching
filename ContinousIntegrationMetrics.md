@@ -1,3 +1,9 @@
+Thesis
+======
+
+All software development workflows can be summarized into a universal model of software integration: code is written, code is verified, code is integrated with other code. Given this universal nature, a simple metric can be created that will quantify the real time integration cycle. Using this metric, a software team can characterize their current cycle, and use that information to suggest and adopt changes that will improve the total cycle time, with the goal of making integration more continous.
+
+
 Terms
 -----
 
