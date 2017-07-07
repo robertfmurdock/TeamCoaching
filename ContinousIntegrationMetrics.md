@@ -60,6 +60,16 @@ Let D be the floored whole value of a business day divided by C. This is the max
 
 Let E be the ceiling whole value of C divided by a business day. This is the minimum number of days it will take for a particular commit to show up in Trunk. E = ceil(C/8), typically.
 
+
+Absolute Minimums can be calculated by considering how long it takes a "null" code change to propegate through each step.
+
+The Absolute Minimum A is the Real Time it takes to verify that the code is Green.
+
+The Absolute Minimum B is theoretically however long it takes to transport the Merge. This is possible when the Green assessment of the Absolute Minimum A is trustworthy.
+
+Practical Minimums can be calculated for each project how long it takes a "null" code change to propegate through the team's infrastructure.
+
+
 Targets
 -------
 
