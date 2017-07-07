@@ -55,7 +55,7 @@ For values of A
 
 | < 2     | < 4            | < 8              | < 16         | < 32      | < 64  |
 |---------|----------------|------------------|--------------|-----------|-------|
-| :smile: | :simple_smile: | :expressionless: | :confounded: | :worried: | :cry: |
+| :smile: | :blush:        | :expressionless: | :confounded: | :worried: | :cry: |
 
 For values of B
 
