@@ -18,7 +18,7 @@ Trunk - "A location where the current code is stored that is considered the sour
 
 Merge - "Integrating Commits into a Trunk."
 
-Real Time - "Median measured business clock time."
+Real Time - "Median measured duration of a task, in business hours."
 
 
 Big Questions
@@ -133,5 +133,5 @@ A common way to deal with these issues is with smarter modularization - organizi
 
 This may be a little unclear to understand, so lets start with an example:
 
-A team has built a web application that will accept data, perform some substantial custom statistics on that data, then present it in a single page app. In order to maximize speed of development, it has been developed in one version control system: a single git repository. The team hits a moment where their total test time is approaching ten minutes for the whole system, and they recognize that this is a substantial productivity hit to them over the course of a day. 
+A team has built a web application that will accept data, perform some substantial custom statistics on that data, then present it in a single page app. In order to maximize speed of development, it has been developed in one version control system: a single git repository. The team hits a moment where their total test time is approaching ten minutes for the whole system, and they recognize that this is a substantial productivity hit to them over the course of a day.
 
