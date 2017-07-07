@@ -67,11 +67,16 @@ For values of B
 Scenarios
 ---------
 
-Pretty Great Scenario:
+### Pretty Great Scenario:
+
 A = 1h
+
 B = 1h
+
 C = 2h
+
 D = 4 Commits
+
 E = 1 day
 
 Every pair can make four changes per day.
