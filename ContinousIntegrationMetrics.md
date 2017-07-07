@@ -102,3 +102,36 @@ D = 4 Commits
 E = 1 day
 
 Every pair can make four changes per day.
+
+Suggestions
+-----------
+
+### To improve values of A
+
+A is composed of two major components:
+
+ 1. The amount of work developers intend to do in the slice of work
+ 2. The Green Real Time... the amount of time it takes to confirm that the code is safe.
+
+#### Improving A.1
+
+Usually when A is large, A.1 is the biggest bite. Improving this is principally cultural - work with the developers to practice breaking down large tasks into smaller, discrete parts. This may involve teaching skills like:
+
+- Object Modeling away from the keyboard
+- Breaking down stories into tasks, and tasks into commits.
+- Branch by Abstraction.
+- Feature Toggling
+- setting short-term team architectural goals
+- tolerating temporary inconsistancy
+- Adding new acceptance tests to the Green validations only after the feature is complete
+
+#### Improving A.2
+
+When teams are excellent at A.1, then, over time, A.2 becomes more prominent. Test suites tend to grow along with the codebase and feature set, and with great complexity comes great validation requirements.
+
+A common way to deal with these issues is with smarter modularization - organizing your code modules according to your team's development needs. Smart modularization allows the team to use the clear dependency rules to determine the correct suite of tests to run given a particular code change.
+
+This may be a little unclear to understand, so lets start with an example:
+
+A team has built a web application that will accept data, perform some substantial custom statistics on that data, then present it in a single page app. In order to maximize speed of development, it has been developed in one version control system: a single git repository. The team hits a moment where their total test time is approaching ten minutes for the whole system, and they recognize that this is a substantial productivity hit to them over the course of a day. 
+
