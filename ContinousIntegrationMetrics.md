@@ -52,7 +52,7 @@ Metrics
 
 Let A be the Real Time that passes between the initial code change and a Commit.
 
-Let B be the Real Time that passes between the Commit and the Merge including that Commit.
+Let B be the Real Time that passes between the Commit and the Merge that contains the Commit.
 
 Let C be the sum of A and B; this is the Real Time for getting a change into the Trunk.
 
@@ -148,3 +148,13 @@ The team considers upcoming work - there's a lot more stuff that will require e2
 Why did the team find this valuable, other than the general satisfaction of modularization? They did this because after the modularization they can use logical guarentees to skip unrelated tests. "When I change something in module C, it is *impossible* for it to affect A, B and D".
 
 By doing this, and upgrading their build system to optimize test runs based on the dependency tree, they were able to cut their median build time to a *third* of what it was. And only the rare builds that update the shared library or updated other shared dependencies will trigger the full build.
+
+### To improve values of B
+
+Depending on a particular team's process, B time can be composed of many different things: here they are in a numbered list.
+  1. The technical merge process itself, which may include resolving conflicts with other Commits.
+  2. Some teams add an additional Green validation step, to demonstrate that the source can build twice before being shared.
+  3. Many teams add an explicit code review step before accepting a Commit, that includes one or more developers. Sometimes the review step will also require a team archetect or tech lead to approve.
+  4. Many teams also require that *all* commits related to a particular feature be complete before *any* commits related to the feature may be merged.
+
+Teams suffering from large B values may have substantial bottlenecks for any or all of these processes. Lets discuss some strategies for reducing the burden.
