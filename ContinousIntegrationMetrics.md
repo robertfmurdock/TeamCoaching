@@ -1,10 +1,10 @@
-Metrics for Continous Integration
+Metrics for Continuous Integration
 =================================
 
 Thesis
 ------
 
-All software development workflows can be summarized into a universal model of software integration: code is written, code is verified, code is integrated with other code. Given this universal nature, a simple metric can be created that will quantify the real time integration cycle. Using this metric, a software team can characterize their current cycle, and use that information to suggest and adopt changes that will improve the total cycle time, with the goal of making integration more continous.
+All software development workflows can be summarized into a universal model of software integration: code is written, code is verified, code is integrated with other code. Given this universal nature, a simple metric can be created that will quantify the real time integration cycle. Using this metric, a software team can characterize their current cycle, and use that information to suggest and adopt changes that will improve the total cycle time, with the goal of making integration more continuous.
 
 
 Terms
@@ -122,7 +122,7 @@ Usually when A is large, A.1 is the biggest bite. Improving this is principally 
 - Branch by Abstraction.
 - Feature Toggling
 - setting short-term team architectural goals
-- tolerating temporary inconsistancy
+- tolerating temporary inconsistency
 - Adding new acceptance tests to the Green validations only after the feature is complete
 
 #### Improving A.2
@@ -137,15 +137,15 @@ This may be a little difficult to understand, so allow me to suggest some exampl
 
 A team has built a web application that will accept data, perform some substantial custom statistics on that data, then present it in a single page app. In order to maximize speed of development, it has been developed in one version control system: a single git repository. The team hits a moment where their total test time is approaching ten minutes for the whole system, and they recognize that this is a substantial productivity hit to them over the course of a day. After some investigation, they see that about three minutes of the build time is attributed to the core engine of the statistics system, and they note that over the last three months, only minor changes have been made to this core system.
 
-Given this knowledge, they decide to extract the core statistics system to its own, independant module still within their git repository. The independance is *important*: that module has *zero* dependencies on other modules within this repository. Because of this, they can make the following optimization to the Green process: the tests for the core module will *only* run when a modification has been made to code in that core module; otherwise they can be safely skipped. In this way, the team safely cuts out three minutes from a typical Green process, bringing their median A down substantially. They also decided to daily run the *full* test suite, just to ensure that there aren't any time-related problems in that module code. And of course, when changes *are* made to that module, the full build is run as well. To maximize safety, instead of relying on the programmer's discretion as to whether they should run these tests or not, the team uses a build tool that will detect when changes are made to that module, and include those tests automatically.
+Given this knowledge, they decide to extract the core statistics system to its own, independent module still within their git repository. The independence is *important*: that module has *zero* dependencies on other modules within this repository. Because of this, they can make the following optimization to the Green process: the tests for the core module will *only* run when a modification has been made to code in that core module; otherwise they can be safely skipped. In this way, the team safely cuts out three minutes from a typical Green process, bringing their median A down substantially. They also decided to daily run the *full* test suite, just to ensure that there aren't any time-related problems in that module code. And of course, when changes *are* made to that module, the full build is run as well. To maximize safety, instead of relying on the programmer's discretion as to whether they should run these tests or not, the team uses a build tool that will detect when changes are made to that module, and include those tests automatically.
 
 ##### Example 2
 
 A team has built a comprehensive web application over the course of a few years. There are a *lot* of web browser based end to end tests on account of this, and the e2e test suite is part of the Green requirements. This is appropriate - these are tests managed by the developers (the QA team has their own suite of tests that are not required as part of Green). However, the burden of these tests is getting fairly onerous - they take four minutes to run, of the total test time of six minutes.
 
-The team considers upcoming work - there's a lot more stuff that will require e2e testing! On account of this, they decide to take the problem seriously now. They assess that the frontend of their application can be reasonably divided into four parts - each satisfying a different user. They decide to take advantage of this - they modularize their frontend into five modules. One module will act as their shared library, which will be deliberately thin, rarely-modified, and consumed by the other four modules. The other four will act as almost independant applications.
+The team considers upcoming work - there's a lot more stuff that will require e2e testing! On account of this, they decide to take the problem seriously now. They assess that the frontend of their application can be reasonably divided into four parts - each satisfying a different user. They decide to take advantage of this - they modularize their frontend into five modules. One module will act as their shared library, which will be deliberately thin, rarely-modified, and consumed by the other four modules. The other four will act as almost independent applications.
 
-Why did the team find this valuable, other than the general satisfaction of modularization? They did this because after the modularization they can use logical guarentees to skip unrelated tests. "When I change something in module C, it is *impossible* for it to affect A, B and D".
+Why did the team find this valuable, other than the general satisfaction of modularization? They did this because after the modularization they can use logical guarantees to skip unrelated tests. "When I change something in module C, it is *impossible* for it to affect A, B and D".
 
 By doing this, and upgrading their build system to optimize test runs based on the dependency tree, they were able to cut their median build time to a *third* of what it was. And only the rare builds that update the shared library or updated other shared dependencies will trigger the full build.
 
@@ -154,7 +154,7 @@ By doing this, and upgrading their build system to optimize test runs based on t
 Depending on a particular team's process, B time can be composed of many different things: here they are in a numbered list.
   1. The technical merge process itself, which may include resolving conflicts with other Commits.
   2. Some teams add an additional Green validation step, to demonstrate that the source can build twice before being shared.
-  3. Many teams add an explicit code review step before accepting a Commit, that includes one or more developers. Sometimes the review step will also require a team archetect or tech lead to approve.
+  3. Many teams add an explicit code review step before accepting a Commit, that includes one or more developers. Sometimes the review step will also require a team architect or tech lead to approve.
   4. Many teams also require that *all* commits related to a particular feature be complete before *any* commits related to the feature may be merged.
 
 Teams suffering from large B values may have substantial bottlenecks for any or all of these processes. Lets discuss some strategies for reducing the burden.
