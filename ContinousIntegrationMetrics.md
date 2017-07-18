@@ -165,4 +165,13 @@ Actually merging multiple changes sets can be a pain point for some teams. The p
 
 - Bad tooling that does not automate trivial merges, or is not trustworthy for trivial merges
 - Developers are concurrently working on shared code and changing it in non-compatible ways, making merging difficult and error-prone
-- Code structure has bottlenecks - developers must modify similar files to check in 
+- Code structure has bottlenecks - developers must modify similar files to check in
+- Large Commits, or letting Commits pile up before Merge will make Merge resolution more difficult and more error-prone
+- The test-suite is not trustworthy enough: features may break during a merge undetected.
+
+Of course, the best answer for bad tooling is... improve the tooling. There are many third party tools that can be trusted to mostly correctly merge code.
+
+For developer concurrency problems, the *best* way to solve this is by communication. Find ways to ensure that your team is aware of what the rest of the team is working on. Daily stand-up meetings are an important tool to help with this. Making tasks-in-progress as visible as possible is another key tool... ideally the team should accidentally over the course of the day see which what is in progress. Co-location or strict chat channel guidelines will also be a great boon. Once the possible collision is detected, breaking related work down into tasks that can be explicitly divided between the developers is a fine solution that will encourage the developers to work closely and keep in touch. In extreme cases, blocking work at the story-planning level can be considered; however, this should be considered a last resort as it indicates that the development team cannot be trusted to detect collisions as they arise. A process that requires vast-technical knowledge in order to plan stories is a process that product owners cannot participate in.
+
+When code-structure bottlenecks occur, adding structural features to the source code can reduce the pressure. Take this example: the code requires a "test suite" dictionary file that lists all of the tests being added to the system, and every time a developer adds work they have to modify the file. This file is constantly being merged, and its caused some pain for the team. Given that, inverting the relationship from an explicit "list" into a functional "search" will eliminate the collision point. That is to say, replace the dictionary file with a program that finds and collects the tests. This sort of technique can be applied at many layers of a system, and is the foundation of dependency injection. There are, as always, trade-offs when using this technique, and the team should consider these when solving these problems.
+  
