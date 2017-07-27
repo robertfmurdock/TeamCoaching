@@ -61,13 +61,13 @@ Let D be the floored whole value of a business day divided by C. This is the max
 Let E be the ceiling whole value of C divided by a business day. This is the minimum number of days it will take for a particular commit to show up in Trunk. E = ceil(C/8), typically.
 
 
-Absolute Minimums can be calculated by considering how long it takes a "null" code change to propegate through each step.
+Absolute Minimums can be calculated by considering how long it takes a "null" code change to propagate through each step.
 
 The Absolute Minimum A is the Real Time it takes to verify that the code is Green.
 
 The Absolute Minimum B is theoretically however long it takes to transport the Merge. This is possible when the Green assessment of the Absolute Minimum A is trustworthy.
 
-Practical Minimums can be calculated for each project how long it takes a "null" code change to propegate through the team's infrastructure.
+Practical Minimums can be calculated for each project how long it takes a "null" code change to propagate through the team's infrastructure.
 
 
 Targets
@@ -110,7 +110,7 @@ Suggestions
 
 A is composed of two major components:
 
- 1. The amount of work developers intend to do in the slice of work
+ 1. The amount of work developers perform in the slice of work
  2. The Green Real Time... the amount of time it takes to confirm that the code is safe.
 
 #### Improving A.1
@@ -135,9 +135,9 @@ This may be a little difficult to understand, so allow me to suggest some exampl
 
 ##### Example 1
 
-A team has built a web application that will accept data, perform some substantial custom statistics on that data, then present it in a single page app. In order to maximize speed of development, it has been developed in one version control system: a single git repository. The team hits a moment where their total test time is approaching ten minutes for the whole system, and they recognize that this is a substantial productivity hit to them over the course of a day. After some investigation, they see that about three minutes of the build time is attributed to the core engine of the statistics system, and they note that over the last three months, only minor changes have been made to this core system.
+A team has built a web application that will accept data, perform some substantial custom statistics on that data, then present it in a single page app. In order to maximize speed of development, it has been developed in one version control system: a single git repository. The team hits a moment where their total test time is approaching ten minutes for the whole system, and they recognize that this is a substantial productivity cost to them over the course of a day. After some investigation, they see that about three minutes of the build time is attributed to the core engine of the statistics system, and they note that over the last three months, only minor changes have been made to this core system.
 
-Given this knowledge, they decide to extract the core statistics system to its own, independent module still within their git repository. The independence is *important*: that module has *zero* dependencies on other modules within this repository. Because of this, they can make the following optimization to the Green process: the tests for the core module will *only* run when a modification has been made to code in that core module; otherwise they can be safely skipped. In this way, the team safely cuts out three minutes from a typical Green process, bringing their median A down substantially. They also decided to daily run the *full* test suite, just to ensure that there are not any time-related problems in that module code. And of course, when changes *are* made to that module, the full build is run as well. To maximize safety, instead of relying on the programmer's discretion as to whether they should run these tests or not, the team uses a build tool that will detect when changes are made to that module, and include those tests automatically.
+Given this knowledge, they decide to extract the core statistics system to its own, independent module still within their git repository. The independence is *important*: that module has *zero* dependencies on other modules within this repository. Because of this, they can make the following optimization to the Green process: the tests for the core module will *only* run when a modification has been made to code in that core module; otherwise they can be safely skipped. In this way, the team safely cuts out three minutes from a typical Green process, bringing their median A down substantially. They also decided to daily run the *full* test suite, just to ensure that there are not any time-related problems in that module code. And of course, when changes *are* made to that module, the full build must be run. To maximize safety, instead of relying on the programmer's discretion as to whether they should run these tests or not, the team uses a build tool that will detect when changes are made to that module, and include those tests automatically.
 
 ##### Example 2
 
@@ -151,7 +151,7 @@ By doing this, and upgrading their build system to optimize test runs based on t
 
 ### To improve values of B
 
-Depending on a particular team's process, B time can be composed of many different things: here they are in a numbered list.
+Depending on a particular team's process, B time can be composed of many different things. Here they are in a numbered list:
   1. The technical merge process itself, which may include resolving conflicts with other Commits.
   2. Some teams add an additional Green validation step, to demonstrate that the source can build twice before being shared.
   3. Many teams add an explicit code review step before accepting a Commit, that includes one or more developers. Sometimes the review step will also require a team architect or tech lead to approve.
@@ -167,11 +167,17 @@ Actually merging multiple changes sets can be a pain point for some teams. The p
 - Developers are concurrently working on shared code and changing it in non-compatible ways, making merging difficult and error-prone
 - Code structure has bottlenecks - developers must modify similar files to check in
 - Large Commits, or letting Commits pile up before Merge will make Merge resolution more difficult and more error-prone
-- The test-suite is not trustworthy enough: features may break during a merge undetected.
+- The test-suite is not trustworthy enough: features may break during a merge and the bug escapes detection.
 
 Of course, the best answer for bad tooling is... improve the tooling. There are many third party tools that can be trusted to mostly correctly merge code.
 
-For developer concurrency problems, the *best* way to solve this is by communication. Find ways to ensure that your team is aware of what the rest of the team is working on. Daily stand-up meetings are an important tool to help with this. Making tasks-in-progress as visible as possible is another key tool... ideally the team should accidentally over the course of the day see which what is in progress. Co-location or strict chat channel guidelines will also be a great boon. Once the possible collision is detected, breaking related work down into tasks that can be explicitly divided between the developers is a fine solution that will encourage the developers to work closely and keep in touch. In extreme cases, blocking work at the story-planning level can be considered; however, this should be considered a last resort as it indicates that the development team cannot be trusted to detect collisions as they arise. A process that requires vast-technical knowledge in order to plan stories is a process that product owners cannot participate in.
+For developer concurrency problems, the *best* way to solve this is by communication. Find ways to ensure that your team is aware of what the rest of the team is working on. Daily stand-up meetings are an important tool to help with this. Making tasks-in-progress as visible as possible is another key tool - ideally the team should accidentally over the course of the day notice tasks-in-progress. Physical story boards are a fine tool for communicating this information. Co-location or strict chat channel guidelines will also be a great boon. 
 
-When code-structure bottlenecks occur, adding structural features to the source code can reduce the pressure. Take this example: the code requires a "test suite" dictionary file that lists all of the tests being added to the system, and every time a developer adds work they have to modify the file. This file is constantly being merged, and its caused some pain for the team. Given that, inverting the relationship from an explicit "list" into a functional "search" will eliminate the collision point. That is to say, replace the dictionary file with a program that finds and collects the tests. This sort of technique can be applied at many layers of a system, and is the foundation of dependency injection. There are, as always, trade-offs when using this technique, and the team should consider these when solving these problems.
+Once the possible collision is detected, having the developers break related work down into tasks that can be explicitly divided amongst them will encourage the developers to work closely and keep in touch. In extreme cases, blocking work at the story-planning level can be considered; however, this should be considered a *last resort*. Blocking work at the planning level indicates that the development team is not trusted to detect and resolve collisions as they arise. A planning process that requires substantial technical knowledge will tend to freeze out product owners, and this defeats the purpose of planning.
+
+When code-structure bottlenecks occur, adding structural features to the source code can reduce the pressure. Take this example: the code requires a "test suite" dictionary file that lists all of the tests being added to the system, and every time a developer adds work they have to modify the file. This file is constantly being merged, and this merge has caused some pain for the team. Given that, inverting the relationship from an explicit "list" into a functional "search" will eliminate the collision point. That is to say, replace the dictionary file with a program that finds and collects the tests. This sort of technique can be applied at many layers of a system, and is the foundation of dependency injection. There are trade-offs when using this technique, and the team should consider these when solving these problems.
   
+Large Commits are an issue that is also discussed in relation to A.1. However, improving A.1 will not help when many Commits have been completed but not merged. The simple suggestion - attempt to merge after as few Commits as possible. Depending on the team process, this might not be as simple as it sounds. Team process related issues will be discussed in more detail in suggestions for improving B.2, B.3, and B.4.
+
+When the test-suite is not trustworthy, there are a number of problems that could be in play here - much more than this document will be able to cover in brief. In short, the team's goal should be to work to create "safe-zones" within the source code, where the test-suite IS trustworthy, and then work to separate the untrustworthy code from the trustworthy code. Over time, pull as much code as is appropriate from the untrusted category into the trusted category.
+
