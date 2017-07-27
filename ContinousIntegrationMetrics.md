@@ -181,3 +181,14 @@ Large Commits are an issue that is also discussed in relation to A.1. However, i
 
 When the test-suite is not trustworthy, there are a number of problems that could be in play here - much more than this document will be able to cover in brief. In short, the team's goal should be to work to create "safe-zones" within the source code, where the test-suite IS trustworthy, and then work to separate the untrustworthy code from the trustworthy code. Over time, pull as much code as is appropriate from the untrusted category into the trusted category.
 
+#### Improving B.2
+
+When the Real Time value of checking Green is reasonable, this is unlikely to be a major bottleneck. However, for projects of substantial size, rerunning a build may become more painful. When total Green time is over twenty minutes, this can be excruciating. Assuming that the recommendations from improving A.2 have already been applied (in-repository modularization and caching), this is a good time to consider stronger measures. These measures may include:
+  
+  - Use concurrency to maximize the number of modules that can be built and tested simultaneously.
+  - Add additional hardware to the build process such that concurrency-enabled builds can be performed faster
+  - Explore smart caching at the build-server level; only build modules that the changed code can affect
+  - Reducing the depth of the project's module hierarchy. That is to say, minimize the number of modules that 'everything depends on', and when possible, divide them into more highly specified modules.
+  - Extracting isolated modules from the project into true independent libraries, with their own semver. Be warned, this solution will bring a new category of continuous integration problems into play (CI with dependencies).
+  - Consider converting some dependencies from build dependencies to service dependencies. This should *only* be considered if this approach is appropriate for the business. This also opens a new category of continuous integration problems into play (CI with in-development services)
+  
