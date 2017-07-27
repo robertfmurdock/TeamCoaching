@@ -190,5 +190,5 @@ When the Real Time value of checking Green is reasonable, this is unlikely to be
   - Explore smart caching at the build-server level; only build modules that the changed code can affect
   - Reducing the depth of the project's module hierarchy. That is to say, minimize the number of modules that 'everything depends on', and when possible, divide them into more highly specified modules.
   - Extracting isolated modules from the project into true independent libraries, with their own semver. Be warned, this solution will bring a new category of continuous integration problems into play (CI with dependencies).
-  - Consider converting some dependencies from build dependencies to service dependencies. This should *only* be considered if this approach is appropriate for the business. This also opens a new category of continuous integration problems into play (CI with in-development services)
+  - Consider converting some dependencies from build dependencies to service dependencies. This should *only* be considered if this approach is appropriate for the business. This also brings a new category of continuous integration problems into play (CI with in-development services)
   
