@@ -161,7 +161,7 @@ Teams suffering from large B values may have substantial bottlenecks for any or 
 
 #### Improving B.1: Merge Process
 
-Actually merging multiple changes sets can be a pain point for some teams. The pain usually comes from one of these sources:
+Actually merging multiple Commits can be a pain point for some teams. The pain usually comes from one of these sources:
 
 - Bad tooling that does not automate trivial merges, or is not trustworthy for trivial merges
 - Developers are concurrently working on shared code and changing it in non-compatible ways, making merging difficult and error-prone
