@@ -153,9 +153,9 @@ By doing this, and upgrading their build system to optimize test runs based on t
 
 Depending on a particular team's process, B time can be composed of many different things. Here they are in a numbered list:
   1. The technical merge process itself, which may include resolving conflicts with other Commits.
-  2. Some teams add an additional Green validation step, to demonstrate that the source can build twice before being shared.
-  3. Many teams add an explicit code review step before accepting a Commit, that includes one or more developers. Sometimes the review step will also require a team architect or tech lead to approve.
-  4. Many teams also require that *all* commits related to a particular feature be complete before *any* commits related to the feature may be merged.
+  2. Many teams also require that *all* commits related to a particular feature be complete before *any* commits related to the feature may be merged.
+  3. Some teams add an additional Green validation step, to demonstrate that the source can build twice before being shared.
+  4. Many teams add an explicit code review step before accepting a Commit, that includes one or more developers. Sometimes the review step will also require a team architect or tech lead to approve.
 
 Teams suffering from large B values may have substantial bottlenecks for any or all of these processes. Lets discuss some strategies for reducing the burden.
 
@@ -181,7 +181,17 @@ Large Commits are an issue that is also discussed in relation to A.1. However, i
 
 When the test-suite is not trustworthy, there are a number of problems that could be in play here - much more than this document will be able to cover in brief. In short, the team's goal should be to work to create "safe-zones" within the source code, where the test-suite IS trustworthy, and then work to separate the untrustworthy code from the trustworthy code. Over time, pull as much code as is appropriate from the untrusted category into the trusted category.
 
-#### Improving B.2: Repeated Green
+#### Improving B.2: Feature-complete before Merge
+
+Many teams currently require that a feature be complete before Merge. Teams will vary on definition of what a "feature" is - some will define it using story-card boundaries, others will be less strict. This document touches on this subject in the "Large Commits" paragraph of "Improving B.1". However, there are a few more things worth noting here.
+
+A Commit, as defined in the Terms section, must be discreet and Green. Being Green means that it has not broken any existing functionality, and is not broken itself.  Given that, *every Commit should be considered feature-complete for the features it provides*. Now of course, being feature-complete for those features does not mean that those features are ready for public consumption - there is a difference between being *feature-complete* and *presentable*. Because of this distinction, there is a problem - for some Commits, merely being Green may not be sufficient to safely Merge. These Commits are those that expose un-presentable features to the user.
+
+One way to avoid this problem is by improving the Team culture such that it understands that *every Commit will be shown to users*. Given this knowledge, the team should use a variety of techniques to *hide* un-presentable features within those Commits. This may be as simple as not including an element on the main page, or as complex as an environment-specific feature-toggle.
+
+The important thing is that the team is aware of any and all *additional Commit requirements* and adheres to them consistently. Given that, work to Merge after every Commit, and work to end the relationship between story-completion and Merge.
+
+#### Improving B.3: Repeated Green
 
 When the Real Time value of checking Green is reasonable, this is unlikely to be a major bottleneck. However, for projects of substantial size, rerunning a build may become more painful. When total Green time is over twenty minutes, this can be excruciating. Assuming that the recommendations from improving A.2 have already been applied (in-repository modularization and caching), this is a good time to consider stronger measures. These measures may include:
   
@@ -192,7 +202,7 @@ When the Real Time value of checking Green is reasonable, this is unlikely to be
   - Extracting isolated modules from the project into true independent libraries, with their own semver. Be warned, this solution will bring a new category of continuous integration problems into play (CI with dependencies).
   - Consider converting some dependencies from build dependencies to service dependencies. This should *only* be considered if this approach is appropriate for the business. This also brings a new category of continuous integration problems into play (CI with in-development services)
   
-#### Improving B.3: Blocking Formal Code Review (BFCR)
+#### Improving B.4: Blocking Formal Code Review (BFCR)
 
 It has become fairly common that a team will institute a formal code review step that will block the Commit from being Merged until a minimum number of reviewers have approved the Commit. This process can vary radically in terms of time-cost: some teams are able to do formal review within an hour of the Commit. Most teams wait substantially longer; in extreme cases this may be over a week.
 
@@ -214,7 +224,7 @@ Fixing the obvious holes in the process should help streamline the BFCR process.
 
 ##### Non-blocking Formal Code Review
 
-To take the code review process even further, consider doing two things: 
+To take the formal code review process even further, consider doing two things: 
   1. Start using team processes that will move the team from "untrusted" to "trusted"
   2. Work to automatically detect critical problems that only BFCR would catch
   3. Begin transitioning from a BFCR process to a non-blocking formal code review process (NBFCR). 
