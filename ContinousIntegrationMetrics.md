@@ -12,7 +12,7 @@ Terms
 
 Green - "All appropriate validations are performed to trust the state of the code."
 
-Commit - "A complete discreet and Green code change."
+Commit - "A complete discrete and Green code change."
 
 Trunk - "A location where the current code is stored that is considered the source of truth."
 
