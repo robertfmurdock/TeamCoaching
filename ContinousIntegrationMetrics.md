@@ -207,10 +207,12 @@ Formal code review of this sort should be considered "blocking" - that is to say
   - How long will the team work using BFCR? Under what conditions will it be dropped? 
 
 Sometimes just answering these questions will suggest how things can be improved; some examples: 
-  - maybe there is no process by which a team member becomes a reviewer, and thus the reviewer pool is too small.
-  - maybe the review team had no formal expectation on responsiveness and was thus acting inconsistently
-  - maybe the reviews are not assigned and thus the review team only performs reviews when they think to check the queue 
+  - Maybe there is no process by which a team member becomes a reviewer, and thus the reviewer pool is too small.
+  - Maybe the review team had no formal expectation on responsiveness and was thus acting inconsistently
+  - Maybe the reviews are not assigned and thus the review team only performs reviews when they think to check the queue 
 Fixing the obvious holes in the process should help streamline the BFCR process.
+
+##### Non-blocking Formal Code Review
 
 To take the code review process even further, consider doing two things: 
   1. Start using team processes that will move the team from "untrusted" to "trusted"
@@ -221,7 +223,7 @@ What does this mean? Essentially, if BFCR is the root of the B.3 problem, then w
 
   - Regular team education time, so all are aware of mandatory project standards / problems that require a tech lead consult 
   - Paired programming with regular rotation for continuous informal code review (CICR)
-  - Regular (possibly daily) formal code review of all recent work by the review team. Optionally, only reviewed builds get promoted to "release".
+  - Regular (possibly daily) formal code review of all recent work by the review team. Optionally, only reviewed builds get promoted to "release". Stories are not considered complete until passing through formal code review.
   
   
 Blocking formal code review can be a massive barrier to getting strong values of D. Being cognizant of how this process is affecting the team can yield big improvements.
