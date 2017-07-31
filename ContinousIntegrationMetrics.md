@@ -106,7 +106,7 @@ Every pair can make four changes per day.
 Suggestions
 -----------
 
-### To improve values of A
+### To improve values of A: Real Time to complete a Commit
 
 A is composed of two major components:
 
@@ -149,7 +149,7 @@ Why did the team find this valuable, other than the general satisfaction of modu
 
 By doing this, and upgrading their build system to optimize test runs based on the dependency tree, they were able to cut their median build time to a *third* of what it was. And only the rare builds that update the shared library or updated other shared dependencies will trigger the full build.
 
-### To improve values of B
+### To improve values of B: Real Time from Commit to Merge 
 
 Depending on a particular team's process, B time can be composed of many different things. Here they are in a numbered list:
   1. The technical merge process itself, which may include resolving conflicts with other Commits.
