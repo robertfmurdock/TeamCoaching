@@ -113,7 +113,7 @@ A is composed of two major components:
  1. The amount of work developers perform in the slice of work
  2. The Green Real Time... the amount of time it takes to confirm that the code is safe.
 
-#### Improving A.1
+#### Improving A.1: work quantity
 
 Usually when A is large, A.1 is the biggest bite. Improving this is principally cultural - work with the developers to practice breaking down large tasks into smaller, discrete parts. This may involve teaching skills like:
 
@@ -125,7 +125,7 @@ Usually when A is large, A.1 is the biggest bite. Improving this is principally 
 - tolerating temporary inconsistency
 - Adding new acceptance tests to the Green validations only after the feature is complete
 
-#### Improving A.2
+#### Improving A.2: Green Real Time
 
 When teams are excellent at A.1, then, over time, A.2 becomes more prominent. Test suites tend to grow along with the codebase and feature set, and with great complexity comes great validation requirements.
 
@@ -203,6 +203,7 @@ Formal code review of this sort should be considered "blocking" - that is to say
   - What is the process by which a team member becomes a "reviewer"?
   - What is the expectation of responsiveness of the review team?
   - How do reviews get assigned?
+  - Does work done by the review team also need review?
   - How long will the team work using BFCR? Under what conditions will it be dropped? 
 
 Sometimes just answering these questions will suggest how things can be improved; some examples: 
