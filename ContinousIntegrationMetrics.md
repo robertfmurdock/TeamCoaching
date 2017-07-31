@@ -101,7 +101,7 @@ D = 4 Commits
 
 E = 1 day
 
-Every pair can make four changes per day.
+Every Committer can make four changes per day.
 
 Suggestions
 -----------
