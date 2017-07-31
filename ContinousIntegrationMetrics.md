@@ -159,7 +159,7 @@ Depending on a particular team's process, B time can be composed of many differe
 
 Teams suffering from large B values may have substantial bottlenecks for any or all of these processes. Lets discuss some strategies for reducing the burden.
 
-#### Improving B.1
+#### Improving B.1: Merge Process
 
 Actually merging multiple changes sets can be a pain point for some teams. The pain usually comes from one of these sources:
 
@@ -181,7 +181,7 @@ Large Commits are an issue that is also discussed in relation to A.1. However, i
 
 When the test-suite is not trustworthy, there are a number of problems that could be in play here - much more than this document will be able to cover in brief. In short, the team's goal should be to work to create "safe-zones" within the source code, where the test-suite IS trustworthy, and then work to separate the untrustworthy code from the trustworthy code. Over time, pull as much code as is appropriate from the untrusted category into the trusted category.
 
-#### Improving B.2
+#### Improving B.2: Repeated Green
 
 When the Real Time value of checking Green is reasonable, this is unlikely to be a major bottleneck. However, for projects of substantial size, rerunning a build may become more painful. When total Green time is over twenty minutes, this can be excruciating. Assuming that the recommendations from improving A.2 have already been applied (in-repository modularization and caching), this is a good time to consider stronger measures. These measures may include:
   
@@ -192,3 +192,35 @@ When the Real Time value of checking Green is reasonable, this is unlikely to be
   - Extracting isolated modules from the project into true independent libraries, with their own semver. Be warned, this solution will bring a new category of continuous integration problems into play (CI with dependencies).
   - Consider converting some dependencies from build dependencies to service dependencies. This should *only* be considered if this approach is appropriate for the business. This also brings a new category of continuous integration problems into play (CI with in-development services)
   
+#### Improving B.3: Blocking Formal Code Review (BFCR)
+
+It has become fairly common that a team will institute a formal code review step that will block the Commit from being Merged until a minimum number of reviewers have approved the Commit. This process can vary radically in terms of time-cost: some teams are able to do formal review within an hour of the Commit. Most teams wait substantially longer; in extreme cases this may be over a week.
+
+Formal code review of this sort should be considered "blocking" - that is to say, no work can be completed until it has been reviewed by an approved authority. Any blocking formal code review (BFCR) process needs to be able to answer these questions:
+
+  - What kind of issues is the BFCR intended to protect against - which issues require the code review process to be *blocking*? This could reasonably include things like "the team cannot be trusted to test", "the team cannot be trusted to respect the threading model", or "the team cannot be trusted to follow the project standards/conventions"
+  - What are the non-critical benefits of the code review process?
+  - What is the process by which a team member becomes a "reviewer"?
+  - What is the expectation of responsiveness of the review team?
+  - How do reviews get assigned?
+  - How long will the team work using BFCR? Under what conditions will it be dropped? 
+
+Sometimes just answering these questions will suggest how things can be improved; some examples: 
+  - maybe there is no process by which a team member becomes a reviewer, and thus the reviewer pool is too small.
+  - maybe the review team had no formal expectation on responsiveness and was thus acting inconsistently
+  - maybe the reviews are not assigned and thus the review team only performs reviews when they think to check the queue 
+Fixing the obvious holes in the process should help streamline the BFCR process.
+
+To take the code review process even further, consider doing two things: 
+  1. Start using team processes that will move the team from "untrusted" to "trusted"
+  2. Work to automatically detect critical problems that only BFCR would catch
+  3. Begin transitioning from a BFCR process to a non-blocking formal code review process (NBFCR). 
+
+What does this mean? Essentially, if BFCR is the root of the B.3 problem, then working to switch to a NBFCR will alleviate much of that pain by divorcing the code review process from the Merging process. All of the benefits of BFCR can be maintained with a NBFCR - appropriate strategies for doing so will vary by team. As a starting point, here are some team processes that may be used to switch from BFCR to NBFCR:
+
+  - Regular team education time, so all are aware of mandatory project standards / problems that require a tech lead consult 
+  - Paired programming with regular rotation for continuous informal code review (CICR)
+  - Regular (possibly daily) formal code review of all recent work by the review team. Optionally, only reviewed builds get promoted to "release".
+  
+  
+Blocking formal code review can be a massive barrier to getting strong values of D. Being cognizant of how this process is affecting the team can yield big improvements.
