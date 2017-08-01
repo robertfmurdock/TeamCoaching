@@ -122,7 +122,7 @@ For teams that want to produce more accurate measurements, then using a timer to
 Understanding Continuous Integration Metrics, and Improving
 ===========================================================
 
-Given the metrics suggested in "Metrics for Continuous Integration", a team may not be satisfied with their results and seek to improve. The following sections are intended to help understand what different values of the metrics may mean, and then suggest ways to improve a team's process in order to improve the metrics.
+Having collected the metrics suggested in "Metrics for Continuous Integration", a team may not be satisfied with their results and seek to improve. The following sections are intended to help understand what different values of the metrics may mean, and then suggest ways to improve a team's process in order to improve the metrics.
 
 
 ### To Improve Commit Time
