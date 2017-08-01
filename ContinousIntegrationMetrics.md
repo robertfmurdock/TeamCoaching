@@ -4,8 +4,7 @@ Metrics for Continuous Integration
 Thesis
 ------
 
-All software development workflows can be summarized into a universal model of software integration: code is written, code is verified, code is integrated with other code. Given this universal nature, a simple metric can be created that will quantify the real time integration cycle. Using this metric, a software team can characterize their current cycle, and use that information to suggest and adopt changes that will improve the total cycle time, with the goal of making integration more continuous.
-
+All software development workflows can be summarized into a universal model of software integration: code is written, code is verified, code is integrated with other code. Given this universal nature, simple metrics exist that will quantify how much real time the integration cycle takes. Using this metric, a software team can characterize their current cycle, and use that information to suggest and adopt changes that will improve the total cycle time, with the goal of making integration more continuous.
 
 Terms
 -----
@@ -19,13 +18,6 @@ Trunk - "A location where the current code is stored that is considered the sour
 Merge - "Integrating Commits into a Trunk."
 
 Real Time - "Median measured duration of a task, in business hours."
-
-Big Questions
--------------
-
-How much Real Time passes between Commit and Merge?
-
-How much Real Time passes between initial code change and Commit?
 
 Universal Software Development Workflow
 ---------------------------------------
@@ -65,7 +57,7 @@ Absolute Minimums can be calculated by considering how long it takes a "null" co
 
 The Absolute Minimum A is the Real Time it takes to verify that the code is Green.
 
-The Absolute Minimum B is theoretically however long it takes to transport the Merge. This is possible when the Green assessment of the Absolute Minimum A is trustworthy.
+The Absolute Minimum B is theoretically however long it takes to transport the Merge. This is possible when the Green assessment of the Absolute Minimum A is trustworthy, and there are never conflicts to be resolved in the Merge.
 
 Practical Minimums can be calculated for each project how long it takes a "null" code change to propagate through the team's infrastructure.
 
@@ -75,6 +67,9 @@ Targets
 
 The Commit-Integration Time (C) is the metric that best illustrates a team's continuous integration interval. This number can be uses to summarize the health of the team's integration process. Daily Max Throughput (D) and Days-to-Integration (E) are useful for illustrating C in a more business-friendly way. Commit Time (A) and Integration Time (B) are useful to know as a diagnostic tool when a team intends to improve C.
 
+For reference, projects of widely-ranging sizes with extremely healthy continuous integration processes have achieved Commit-Integration Times of about 2 hours (or less). Commit-Integration Times of 8 hours might be considered acceptable (given project constraints). Projects with Commit-Integration Times over 8 hours should not be considered "continuous" and will likely exhibit the problems CI ameliorates.
+
+The following table comically illustrates how different values of A and B should be assessed.
 
 For values of A
 
@@ -88,11 +83,9 @@ For values of B
 |---------|------------------|--------------|-------|-------------|----------|
 | :smile: | :expressionless: | :confounded: | :cry: | :grimacing: | :scream: |
 
+Note that higher values of B are considered more painful than higher values of A. This is because B decays value: the Commit is getting more stale the longer the wait.
 
-Scenarios
----------
-
-### Pretty Great Scenario:
+### Extremely Healthy Project Example Numbers
 
 A = 1h
 
@@ -106,10 +99,17 @@ E = 1 day
 
 Every Committer can make four changes per day.
 
+Measurement
+-----------
+
+Collecting these numbers with precision can be challenging. Because these numbers are not likely to change much over the course of a week, it should be considered acceptable to ask a development team to estimate what their current personal A and B values are, and then produce team medians of those values. These estimates are usually sufficient to suggest process improvements.
+
+For teams that want to produce more accurate measurements, then using a timer to collect the A and B of each Commit will be required. Be sure that the timer does not collect non-business time - for example, if a commit is started at 4pm one day, and the developers stop working at 5pm, make sure the timer is stopped and restarted when the developers start again the next day.
+
 Suggestions
 -----------
 
-### To improve values of A: Real Time to complete a Commit
+### To improve values of A: Commit Time
 
 A is composed of two major components:
 
@@ -152,7 +152,7 @@ Why did the team find this valuable, other than the general satisfaction of modu
 
 By doing this, and upgrading their build system to optimize test runs based on the dependency tree, they were able to cut their median build time to a *third* of what it was. And only the rare builds that update the shared library or updated other shared dependencies will trigger the full build.
 
-### To improve values of B: Real Time from Commit to Merge 
+### To improve values of B: Integration Time 
 
 Depending on a particular team's process, B time can be composed of many different things. Here they are in a numbered list:
   1. The technical merge process itself, which may include resolving conflicts with other Commits.
