@@ -1,5 +1,5 @@
 Metrics for Continuous Integration
-=================================
+==================================
 
 Thesis
 ------
@@ -119,8 +119,11 @@ Collecting these numbers with precision can be challenging. Because these number
 
 For teams that want to produce more accurate measurements, then using a timer to collect the CT and IT of each Commit will be required. Be sure that the timer does not collect non-business time - for example, if a commit is started at 4pm one day, and the developers stop working at 5pm, make sure the timer is stopped and restarted when the developers start again the next day.
 
-Suggestions
------------
+Understanding Continuous Integration Metrics, and Improving
+===========================================================
+
+Given the metrics suggested in "Metrics for Continuous Integration", a team may not be satisfied with their results and seek to improve. The following sections are intended to help understand what different values of the metrics may mean, and then suggest ways to improve a team's process in order to improve the metrics.
+
 
 ### To Improve Commit Time
 
