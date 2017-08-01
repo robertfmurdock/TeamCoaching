@@ -20,15 +20,12 @@ Merge - "Integrating Commits into a Trunk."
 
 Real Time - "Median measured duration of a task, in business hours."
 
-
 Big Questions
 -------------
 
 How much Real Time passes between Commit and Merge?
 
 How much Real Time passes between initial code change and Commit?
-
-
 
 Universal Software Development Workflow
 ---------------------------------------
@@ -41,25 +38,28 @@ A developer or developer pair cycles through three states:
 - Pull "Update the developer's working code to include changes from the Trunk"
 - Code "Make modifications to the source code locally."
 
-After one or more rotations through these states, the developer will Commit.
+After one or more rotations through these states, the developer will create a Commit.
 
-At some point after the Commit occurs, the Commit will be Merged.
+Later, the Commit will be Merged.
 
 Once the Commit is Merged, it is available to all developers during the Pull step of their workflow.
 
 Metrics
 -------
 
-Let A be the Real Time that passes between the initial code change and a Commit.
+Let A be the Real Time that passes between the initial code change and the creation of a Commit. This may also be called the Commit Time.
 
-Let B be the Real Time that passes between the Commit and the Merge that contains the Commit.
+Let B be the Real Time that passes between the Commit and the Merge that contains the Commit. This may also be called the Integration Time.
 
-Let C be the sum of A and B; this is the Real Time for getting a change into the Trunk.
+Let C be the Real Time for getting a change into the Trunk; the sum of A and B. This may also be called the Commit-Integration Time.
 
-Let D be the floored whole value of a business day divided by C. This is the maximum number of Commits integrated per day, per committer. D = floor(8/C), typically.
+Let D be the maximum number of new Commits integrated per day, per committer. This may also be called the Daily Max Throughput.
 
-Let E be the ceiling whole value of C divided by a business day. This is the minimum number of days it will take for a particular commit to show up in Trunk. E = ceil(C/8), typically.
+This can be calculated as the floored whole value of a business day divided by C. For typical business days, D = floor(8/C)
 
+Let E be the minimum number of days it will take for a particular commit to show up in Trunk. This may also be called  Days-to-Integration.
+
+This can be calculated as the ceiling whole value of C divided by a business day. For typical business days, E = ceil(C/8)
 
 Absolute Minimums can be calculated by considering how long it takes a "null" code change to propagate through each step.
 
@@ -72,6 +72,9 @@ Practical Minimums can be calculated for each project how long it takes a "null"
 
 Targets
 -------
+
+The Commit-Integration Time (C) is the metric that best illustrates a team's continuous integration interval. This number can be uses to summarize the health of the team's integration process. Daily Max Throughput (D) and Days-to-Integration (E) are useful for illustrating C in a more business-friendly way. Commit Time (A) and Integration Time (B) are useful to know as a diagnostic tool when a team intends to improve C.
+
 
 For values of A
 
