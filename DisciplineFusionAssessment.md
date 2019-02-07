@@ -26,8 +26,8 @@ Tests
 
 - Do all the disciplines integrated on the team have instant access to each other?
 
-- Do individuals working within a discipline have meaningful (project-related) encounters with individuals working in other disciplines 
-throughout the day? At least once?
+- Do individuals working within a discipline have meaningful (project-related) encounters with individuals working in 
+other disciplines at least once throughout the day?
 
 - Do all the disciplines share the business object model and use it to communicate concepts? When the model needs to be 
 updated, do they solicit feedback from the perspective of the other disciplines?
@@ -45,7 +45,7 @@ disciplines?
 - Are team members ever penalized for stopping their own story in order to help other team members (regardless of 
 core discipline)?
 
-- Do the stories on the project deliver strategic, practical, or tactile value? Do they communicate to 
+- Do the stories on the project deliver strategic, experimental, or tangible value? Do they communicate to 
 stakeholders what they're intended to achieve?
 
 - Are all of the disciplines needed for the project represented with enough depth for the project to be successful?
