@@ -24,28 +24,38 @@ Stories - A discreet slice of work that can be performed. Stories are preferably
 Tests
 ---
 
-- Do all the disciplines integrated on the team have instant access to each other?
+#### Access Time
+Do all the disciplines integrated on the team have instant access to each other?
 
-- Do individuals working within a discipline have meaningful (project-related) encounters with individuals working in 
+#### Regular Interdisciplinary Contact
+Do individuals working within a discipline have meaningful (project-related) encounters with individuals working in 
 other disciplines at least once throughout the day?
 
-- Do all the disciplines share the business object model and use it to communicate concepts? When the model needs to be 
+#### Shared Conceptual Model
+Do all the disciplines share the business object model and use it to communicate concepts? When the model needs to be 
 updated, do they solicit feedback from the perspective of the other disciplines?
 
-- Can every member of the team tell the story of what the project is, and why we're doing it?
+#### Common Project Story
+Can every member of the team tell the story of what the project is, and why we're doing it?
 
-- Does the team have sufficient authority to make core implementation decisions? Is there a discipline or responsibility
+#### Implementation Autonomy
+Does the team have sufficient authority to make core implementation decisions? Is there a discipline or responsibility
  that's been outsourced that regularly causes work to be stopped?
 
-- Do all team members have clear visibility as to what the rest of the team is currently working on, including in other 
+#### Line of Sight
+Do all team members have clear visibility as to what the rest of the team is currently working on, including in other 
 disciplines?
 
-- Can every individual member of the team leave for weeks without causing a hard block?
+#### Discipline Antifragility
+Can every individual member of the team leave for weeks without causing a hard block?
 
-- Are team members ever penalized for stopping their own story in order to help other team members (regardless of 
+#### Personal Collaboration Discretion
+Are team members ever penalized for stopping their own story in order to help other team members (regardless of 
 core discipline)?
 
-- Do the stories on the project deliver strategic, experimental, or tangible value? Do they communicate to 
+#### Comprehensible Work Plan
+Do the stories on the project deliver strategic, experimental, or tangible value? Do they communicate to 
 stakeholders what they're intended to achieve?
 
-- Are all of the disciplines needed for the project represented with enough depth for the project to be successful?
+#### Discipline Depth
+Are all of the disciplines needed for the project represented with enough depth for the project to be successful?
