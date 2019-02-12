@@ -87,4 +87,21 @@ This isn't a cure-all solution. Even in open offices, teams can develop cultures
  
  These suggestions are built from this premise: investing in the team *is* investing in the project's success. We will trade personal performance in the moment for overall team performance in the longer term.
  
- Physical co-location isn't the only way for teams to succeed at "Improving Access Time". Some teams prefer a digital "co-location" approach. In order to make this work, this also requires very, very strong norms. Where a physically co-located team may define "core hours" that people will work on site, a digital "co-located" team may define "core channels" through which a super-majory of team communications must flow. That is to say, rather than have a room with a shared audio space where people can overhear each other, the team may have a chat channel where all project discussions occur, in a public space, so that there are opportunities for incidental overhearing. It is *very important* to minimize the number of channels the team operates through, because additional channels can easily create the same "invisible wall" problems that physical co-location has. And of course, nurturing the culture of being "available and interruptable" is just as important on a digitally co-located team as it is on any team. 
+ Physical co-location isn't the only way for teams to succeed at "Improving Access Time". Some teams prefer a digital "co-location" approach. In order to make this work, this also requires very, very strong norms. Where a physically co-located team may define "core hours" that people will work on site, a digital "co-located" team may define "core channels" through which a super-majory of team communications must flow. That is to say, rather than have a room with a shared audio space where people can overhear each other, the team may have a chat channel where all project discussions occur, in a public space, so that there are opportunities for incidental overhearing. It is *very important* to minimize the number of channels the team operates through, because additional channels can easily create the same "invisible wall" problems that physical co-location has. And of course, nurturing the culture of being "available and interruptable" is just as important on a digitally co-located team as it is on any team.
+ 
+ ### Improving Regular Interdisciplinary Contact
+ 
+ Its not uncommon for team members working within specific disciplines to begin to cluster together, both physically and socially. There are a number of natural causes for this behavior, and it shouldn't be considered negative unto itself - those discipline-specific relationships are the most important on a team, because they help ensure that the discipline as a whole shares a common vision.
+ 
+ That said, when these clusters "harden", the team as a whole becomes less unified, and rather than sharing a common language and customs, the clusters develop their own separately.
+ 
+ The goal of improving regular interdisciplinary contact is to create space where team members from each discipline can interact regularly and predictably, giving them opportunities to reinforce shared language, customs, and goals. This also helps share knowledge of the strengths of the team.
+ 
+ Some tools that have been employed to improve and encourage contact are:
+    
+##### Scheduled Stand up meetings (a short meeting to temperature-check what's going on)
+A stand up meeting should be short, include at-least everyone on the team, and should have some time available afterward for follow-up conversations. Stand up meetings where there are non-participants may not be delivering the intended value.
+##### Story Acceptance Contact
+Another way to reinforce meaningful interdisciplinary contact is to make part of the team agreement that "representatives of the other discipline(s)" are required to declare a story "complete". In this way, all work that is completed has to be described and understood by at least one other discipline, thus reinforcing a common understanding. Various flavors of this can be used depending on the shape of the project.
+##### Periodic Role Swap
+Another technique that can be used is to periodically move someone who works in one discipline to a different discipline. While they will have to be a junior member for the duration of the swap, this will give them the beginning of an insider understanding of what the discipline does, and the tools they use to perform the work.
