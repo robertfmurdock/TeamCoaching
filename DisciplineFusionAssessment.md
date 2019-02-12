@@ -107,3 +107,5 @@ Another way to reinforce meaningful interdisciplinary contact is to make part of
 Another technique that can be used is to periodically move someone who works in one discipline to a different discipline. While they will have to be a junior member for the duration of the swap, this will give them the beginning of an insider understanding of what the discipline does, and the tools they use to perform the work.
 ##### Strategic Collaboration
 Oftentimes, core design decisions for the product will need input from all the relevant disciplines. To ensure that all points of view are represented, create a planning cadence such that representatives of each discipline can assist in creating the story plan. Sometimes this kind of work is singular enough that it is appropriately written as a story to be executed by multiple disciplines together-as-one. It is very easy to accidentally 'freeze' a discipline out by assuming their motives, so addressing this problem is important.
+
+### Improving Shared Conceptual Model
