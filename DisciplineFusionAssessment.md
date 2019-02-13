@@ -99,8 +99,8 @@ This isn't a cure-all solution. Even in open offices, teams can develop cultures
  
  Some tools that have been employed to improve and encourage contact are:
     
-##### Scheduled Stand up meetings (a short meeting to temperature-check what's going on)
-A stand up meeting should be short, include at-least everyone on the team, and should have some time available afterward for follow-up conversations. Stand up meetings where there are non-participants may not be delivering the intended value.
+##### Scheduled Stand up meetings
+A stand up meeting is a short meeting (5-10 minutes for typical size teams, max 15 for large teams) to temperature-check what's going on. A stand up meeting should include at-least every member of the team, and should have some unscheduled time available afterward for follow-up conversations. Stand up meetings where there are non-participants may not be delivering the intended value - if someone attends a stand up, they should participate, whether or not their current work is considered 'relevant' to the group. This is because the essence of a stand up meeting is discovering the *unexpectedly relevant*, and thus habits of self censorship are to be avoided. By the same token though, this is why deep dives and explorations are inappropriate for stand up and should be expressed in other meetings / rituals.
 ##### Story Acceptance Contact
 Another way to reinforce meaningful interdisciplinary contact is to make part of the team agreement that "representatives of the other discipline(s)" are required to declare a story "complete". In this way, all work that is completed has to be described and understood by at least one other discipline, thus reinforcing a common understanding. Various flavors of this can be used depending on the shape of the project.
 ##### Periodic Role Swap
