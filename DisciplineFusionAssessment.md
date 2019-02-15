@@ -109,3 +109,19 @@ Another technique that can be used is to periodically move someone who works in 
 Oftentimes, core design decisions for the product will need input from all the relevant disciplines. To ensure that all points of view are represented, create a planning cadence such that representatives of each discipline can assist in creating the story plan. Sometimes this kind of work is singular enough that it is appropriately written as a story to be executed by multiple disciplines together-as-one. It is very easy to accidentally 'freeze' a discipline out by assuming their motives, so addressing this problem is important.
 
 ### Improving Shared Conceptual Model
+Operating as a unified team hinges on creating and nurturing a common project-related language. That is to say, every project has a series of concepts and nouns that describe the landscape of the project. Frequently, these will relate to describing a process that the project is intended to improve in some way. This set of terms and relationships is a conceptual object model, also commonly known as a business object model. Ultimately, the object model must also be easily comprehensible to the users of the product, because it will be come the language of the product. Therefore, it is important for it to be well curated.
+Properly understood, this model is and must be a shared artifact that all disciplines use in order to execute work - because the model is fundamentally abstract (it should be easily regenerated with a white board and a marker), versions of it will appear in all artifacts related to the project. For example, the model will be expressed in:
+- Value Stories (at the absolute highest level)
+- User Stories
+- Product mock-ups
+- User interviews
+- Software user interfaces
+- Hardware user interfaces
+- Source code
+- And even more.
+ 
+ Its fairly easy for disciplines to fall out of sync on their understanding of the the object model. For example, the design group's understanding of the users can easily run far ahead of the software development group. Or, a converse example, the software development group may have to modify the model because some of the relationships were too loosely defined, and they failed to test those changes back against the design groups understanding. Given enough time and weak communication, small differences in the model's understanding can lead to inconsistencies in the product that have a high user impact. They can also sour a collaborate relationship between disciplines into a negative adversarial one.
+ 
+ So what to do? How does a team get better at this? A few suggestions follow.
+ 
+ 
