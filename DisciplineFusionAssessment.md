@@ -124,4 +124,9 @@ Properly understood, this model is and must be a shared artifact that all discip
  
  So what to do? How does a team get better at this? A few suggestions follow.
  
+ Gathering together a workable (and disciplinarily diverse) subset of the team, and brainstorm to think of all the "nouns" associated with the project. Depending on the depth of the domain, this may take a good amount of time, so its probably good to timebox each session to about an hour. This is a good time to do some preliminary grooming - if two terms mean the same thing, see if the group can cull one of them. The nouns may be referred to as "business objects", "domain objects", or "entities".
+ After coming up with an initial list of nouns, the next step is to start illustrating the natural relationships between these entities. The goal is to force the relationships to be strict, and thus clear. In order to bring some of that rigor, make sure that the quantities of the relationship are expressed - for example, a "kitchen" can have "n" plates; a "plate" can hold zero or one "dishes". This numerical relationship can help clarify how a team may be using the term slightly differently.
  
+ You'll want to run these exercises periodically with your team (in various configurations). Over time, the team should be able to illustrate the entities and the relationships in a very short amount of time, and terms that were once controversial should become normed.
+ 
+ There are follow up exercises that will help test and exercise this domain model as well, including storytelling (using the model to describe a user's way of interacting with the model), event-storming (formalizing how actors interact with the domain model by formalizing events and commands used in the user's story), and deeper product visioning (exploring the "what will have to change about this model in two years" problem).
