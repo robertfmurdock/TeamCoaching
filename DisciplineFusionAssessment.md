@@ -130,3 +130,22 @@ Properly understood, this model is and must be a shared artifact that all discip
  You'll want to run these exercises periodically with your team (in various configurations). Over time, the team should be able to illustrate the entities and the relationships in a very short amount of time, and terms that were once controversial should become normed.
  
  There are follow up exercises that will help test and exercise this domain model as well, including storytelling (using the model to describe a user's way of interacting with the model), event-storming (formalizing how actors interact with the domain model by formalizing events and commands used in the user's story), and deeper product visioning (exploring the "what will have to change about this model in two years" problem).
+ 
+ ### Improving Common Project Story
+ 
+ If your team is having trouble telling the story of the project, the problem usually starts at the top. Every project has one or two people who effectively are responsible for owning the project - they are responsible for the investment in the project and thus must know the underlying reason for the investment. If the person perceived to be the "owner" in this sense does not fulfill both of these responsibilities, then it is probably time to find the true "owner", or find a way to bring those responsibilities to the expected owner.
+ 
+ But knowing the product owner is just the beginning. In theory, the person acting in this role should be able to give you a high level version of "why the project exists". Usually, the first versions of this story will either be hyper brief, or, more commonly, excessively scattered. An engaged product owner will often have *so many ideas* about the potential of the product that listening to them explain it can confuse the listener.
+ 
+ To help find the story, work with the product owner to find the center tent-pole value. What is the core feature that gets them excited? And, as a follow on, what are the kind of people the project is intended to help? And do they know people in that category personally? Broadly speaking, you should be able to summarize the whole project as "we're going to help PERSON do TASK..." followed by a description of how the project will improve or make possible the task at hand. Every project has one of these at its center, though it is normal and appropriate to have other derivative projects with their own statements in the periphery. While these stories are relevant, its important to ensure that the main story of the project centers around one core piece of value. Because if the center does not hold, then the other stories will have to shift as well.
+ 
+ Getting a short and strong version of this story into the heads of the team is the next step. Generally, it should be impossible to overdue this. Building versions of the story into natural team rituals can go a long way here. Some examples:
+  - recapping the story at the beginning of any iteration review
+  - Using a micro version of the story as a stand-up sign-off
+  - In any story card review meeting, always rhetorically justify the story card by connecting it to the big story.
+  - Putting versions of the story on physical artifacts in the team space, with iconography reinforcing it
+  - setting aside regular all-hands meetings to recap and Q+A on how the work connects to the story
+  
+ None of these techniques are mandatory - they're all just tools to help socialize and communicate that high level story. At the point where they feel onerous or oppressive because the team already knows the story, switch or remove the tool you're using. If they feel painful because the team *does not believe* that the story, then there's a deeper problem at hand and your team has probably entered into the proverbial "death march". Dealing with that situation is outside the scope of this paper, but is worthy of further discussion. 
+ 
+ 
