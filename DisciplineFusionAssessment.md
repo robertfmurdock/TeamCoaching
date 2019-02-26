@@ -3,7 +3,7 @@ Discipline Fusion Assessment
 
 Here are some tests that one can run in order to determine whether a multidisciplinary team is operating is a "fused" manner.
 
-But first! Lets get some terms down.
+But first! Let's get some terms down.
 
 Terms
 ---
@@ -19,7 +19,7 @@ Discipline - A distinct branch of knowledge used to perform work on a team.
 
 Fusion - The state in which a team is integrating multiple disciplines successfully.
 
-Stories - A discreet slice of work that can be performed. Stories are preferably written from a user's perspective.
+Stories - A discrete slice of work that can be performed. Stories are preferably written from a user's perspective.
 
 Tests
 ---
@@ -46,7 +46,7 @@ Does the team have sufficient authority to make core implementation decisions? I
 Do all team members have clear visibility as to what the rest of the team is currently working on, including in other 
 disciplines?
 
-#### Discipline Antifragility
+#### Discipline Elasticity
 Can every individual member of the team leave for weeks without causing a hard block?
 
 #### Personal Collaboration Discretion
@@ -65,7 +65,7 @@ More Perfect Fusion
 ===
 
 After a team has asked and answered all of the questions posed by the tests above, they will probably be looking for 
-ways to improve. This section will consider each of the tests, and make suggestions about how a team can get improve.
+ways to improve. This section will consider each of the tests, and make suggestions about how a team can improve.
 
 ### Improving Access Time
 
@@ -80,7 +80,7 @@ This isn't a cure-all solution. Even in open offices, teams can develop cultures
  
  The underlying goal here is that we want teams that have a culture where:
  - it is always ok to ask for help or feedback
- - it is always ok to respond with "I can't immediately but is it ok I reach out to you in a few minutes", or "I think this other team member might be better suited for your question, lets loop them in"
+ - it is always ok to respond with "I can't immediately but is it ok I reach out to you in a few minutes", or "I think this other team member might be better suited for your question, let's loop them in"
  - it is not ok to discourage team members from reaching out, even if becomes a point of stress
  - it is not ok to ask for assistance in a rude or entitled way, or in any way insensitive to the person who
  the request is targeted at
@@ -148,4 +148,4 @@ Properly understood, this model is and must be a shared artifact that all discip
   
  None of these techniques are mandatory - they're all just tools to help socialize and communicate that high level story. At the point where they feel onerous or oppressive because the team already knows the story, switch or remove the tool you're using. If they feel painful because the team *does not believe* that the story, then there's a deeper problem at hand and your team has probably entered into the proverbial "death march". Dealing with that situation is outside the scope of this paper, but is worthy of further discussion. 
  
- 
+ ### Improving Implementation Autonomy
