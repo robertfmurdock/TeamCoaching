@@ -152,4 +152,16 @@ Properly understood, this model is and must be a shared artifact that all discip
  
  ### Improving Implementation Autonomy
  
+ Its a common story - week after week, stories are blocked because of a handful of things your team feels powerless to change. And the longer it goes on, the less invested in the success of the project your team gets - how could they be invested, when the work they do can be rendered meaningless in an instant. Worse still, the teams knows that all the blame for when the product has problems or fails will fall square on their shoulders, despite their best efforts.
+ 
+ Responsibility is a two way street - if the team is going to be blamed for a problem, then they need the power to address the problem. When a team finds itself in the aforementioned situation, consider clarifying the powers that the team needs in order to eliminate the underlying issue. If there are things the team feels it is not allowed to change, then the team must acquire the authority to change these things. The process of doing so will look different organization to organization, but if this power/blame discrepancy is not addressed, it will be a source of decay in the team until the project ends. Consolidating this power should actually be a higher priority than technical work to fix or work around any problems (within reason - do not allow your customers to suffer). This is because there will always be another patch or emergency work-around, but a team unable to deal with root causes may make things work with intermediate fixes, and foster deep long term problems.
+ 
+ Having gathered the authority to make changes, the team will need to consider some high level options:
+ 
+ - Are there alternate vendors for the feature provided by the blocking resources?
+ - Would the team be better served by providing the feature itself (by absorbing the existing system, or by building a new one)?
+ - Can the feature be eliminated entirely?
+ 
+ Note that all of these questions should apply to any kind of externalized functionality - be it interface design, hardware design, software integrations, or QA. Some of these can be disciplines that have the option of being folded into the team... but keep in mind the effort required to properly fuse. It is good and appropriate for things that have clearly defined independent scope to be outsourced... right up until it becomes critical for the project and/or an unreliable resource. By critical, I merely mean that trying to separate the design of a project from the implementation of a project into two teams is fundamentally inappropriate because, at their core, they are the same project and the team composition should reflect that. A more appropriate example of outsourcing might be having a team that provides a SSO product, that may integrate into a different product. Because SSO is merely a feature of the different product, it has a coherent demarcation between the two systems, which allows more independence and substitutability (using other SSO vendors, for example).
+ 
  
