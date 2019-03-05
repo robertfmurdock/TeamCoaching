@@ -158,10 +158,10 @@ Properly understood, this model is and must be a shared artifact that all discip
  
  Having gathered the authority to make changes, the team will need to consider some high level options:
  
- - Are there alternate vendors for the feature provided by the blocking resources?
+ - Are there alternate vendors for the feature provided by the blocking resources? What are the costs of switching?
  - Would the team be better served by providing the feature itself (by absorbing the existing system, or by building a new one)?
  - Can the feature be eliminated entirely?
  
  Note that all of these questions should apply to any kind of externalized functionality - be it interface design, hardware design, software integrations, or QA. Some of these can be disciplines that have the option of being folded into the team... but keep in mind the effort required to properly fuse. It is good and appropriate for things that have clearly defined independent scope to be outsourced... right up until it becomes critical for the project and/or an unreliable resource. By critical, I merely mean that trying to separate the design of a project from the implementation of a project into two teams is fundamentally inappropriate because, at their core, they are the same project and the team composition should reflect that. A more appropriate example of outsourcing might be having a team that provides a SSO product, that may integrate into a different product. Because SSO is merely a feature of the different product, it has a coherent demarcation between the two systems, which allows more independence and substitutability (using other SSO vendors, for example).
  
- 
+ ### Improving Line of Sight
