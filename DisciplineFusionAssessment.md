@@ -74,16 +74,15 @@ Having fast access to team members is a major factor in team performance and suc
 Given this, a common solution for access problems is to co-locate the entire team, and have a norm of working from the co-located space a super-majority of the time. By at least getting people into the same space, you have removed the first barrier of inaccessibility - "out of sight, out of mind".
 
 This isn't a cure-all solution. Even in open offices, teams can develop cultures of "invisible walls", and these can take a number of forms. Some quick examples of invisible walls:
- - team members wear headphones for long stretches of time
- - team members work too far from each other for a quick 'across the room' question
- - team members respond negatively to requests for a pop-up collaboration session
+ - Team members wear headphones for long stretches of time
+ - Team members work too far from each other for a quick 'across the room' question
+ - Team members respond negatively to requests for a pop-up collaboration session
  
  The underlying goal here is that we want teams that have a culture where:
- - it is always ok to ask for help or feedback
- - it is always ok to respond with "I can't immediately but is it ok I reach out to you in a few minutes", or "I think this other team member might be better suited for your question, let's loop them in"
- - it is not ok to discourage team members from reaching out, even if becomes a point of stress
- - it is not ok to ask for assistance in a rude or entitled way, or in any way insensitive to the person who
- the request is targeted at
+ - It is always ok to ask for help or feedback
+ - It is always ok to respond with "I can't immediately but is it ok I reach out to you in a few minutes", or "I think this other team member might be better suited for your question, let's loop them in"
+ - It is not ok to discourage team members from reaching out, even if becomes a point of stress
+ - It is not ok to ask for assistance in a rude or entitled way, or in any way insensitive to the subject of the request
  
  These suggestions are built from this premise: investing in the team *is* investing in the project's success. We will trade personal performance in the moment for overall team performance in the longer term.
  
