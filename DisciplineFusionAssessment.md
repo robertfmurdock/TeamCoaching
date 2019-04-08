@@ -166,6 +166,48 @@ Properly understood, this model is and must be a shared artifact that all discip
  Note that all of these questions should apply to any kind of externalized functionality - be it interface design, hardware design, software integrations, or QA. Some of these can be disciplines that have the option of being folded into the team... but keep in mind the effort required to properly fuse. It is good and appropriate for things that have clearly defined independent scope to be outsourced... right up until it becomes critical for the project and/or an unreliable resource. By critical, I merely mean that trying to separate the design of a project from the implementation of a project into two teams is fundamentally inappropriate because, at their core, they are the same project and the team composition should reflect that. A more appropriate example of outsourcing might be having a team that provides a SSO product, that may integrate into a different product. Because SSO is merely a feature of the different product, it has a coherent demarcation between the two systems, which allows more independence and substitutability (using other SSO vendors, for example).
  
  ### Improving Line of Sight
+ 
+ By "line of sight", we don't simply mean that team members can easily see each other - we mean that the team has meaningful visibility into the work that is currently being done, and how it is going. Therefore when speaking of software teams, merely being able to see the team in person actually does not get very far in solving the problem of knowing what's going on, though it does help with getting a read on how its going - for example, you can tell that people are agitated, or frustrated, or happy and productive fairly easily.
+ Teams generally use some version of a "project board" in order to help solve the "visibility into what people are doing" problem. The core idea of the board being to represent visually the work that is currently being performed by the team. In order to make such a tool possible, it requires a team agreement regarding the following:
+
+   1. How many states of a story will be represented? e.g. "in-progress", "Complete".
+   2. What do these states mean? 
+   3. Who will update the state of stories as they change?
+   4. Where will it be positioned such that it delivers the intended value?
+   
+ By implication, this means that in order to provide "line of sight", each discipline's work must be represented on the project board in a comprehensible fashion. Sometimes this can be challenging! Oftentimes disciplines that are new or underdeveloped will not be able to represent their work as stories very clearly; they will need to practice to find a flow that works for them. But the rewards are clear - teams that can rapidly and truthfully see what's happening.
+ 
+ Now, just because a team has a project board does not mean that they've successfully implemented it. Some issues that can plague a project board and cause it to substantially drop in value:
+ 
+   - The project board is in a location that is rarely trafficked by the team, and thus people rarely look at it incidentally.
+   -  The team is undisciplined in keeping the board up to date, and thus it actually provides a false indication of the current work of the team.
+   - The stories are unclear, and therefore mislead the reader as to what is happening
+   - The board is not big, visible, simply, or persistent enough to "read well" as an overview
+ 
+ Seem familiar? These kind of problems tend to be "forgettable" problems... they're frequently not painful enough to remember to address or attempt to fix them. Because of that nature, teams can operate for a long time with dysfunctional or low-value project boards and they can easily fall into the trap of "this is just how we do it". Because the project board is fundamentally a communication tool for the project, its should be owned by the team's "delivery" discipline, and thus they should regularly test that its producing the intended results - "line of sight".
+ 
+ But work visualization isn't everything. Teams are made up of humans, and humans have other dimensions than is represented on a story. Another tool that is typically engaged in order to improve "line of sight" is creating a "stand-up meeting" ritual.
+ 
+ The "stand-up" ritual is a flexible ritual created to achieve the following goals:
+ 
+   - To create a touch-point in the work day in which the whole team can take a breath and see each other face to face.
+   - To create a space where less-dominant voices and personalities are able to participate without having to fight for their time.
+   - To get a flavor of what everyone's doing and how they feel about it without drowning in details
+   - To organically discover unanticipated connections, in the way that only making a human connection can  
+   - To create a welcoming space where visitors can learn about the team and meaningfully participate themselves, giving them an honest taste of what its like to be on the team.
+   - To give people an opportunity to be reminded of other team members they may need to have a discussion with (and the time in which to do so)
+   - To do all of this with as little disruption to the work day as possible, ideally doing the whole thing in less than 15 minutes.
+ 
+ Where the project board is the concrete source-of-truth for what the team is doing, the stand-up meeting is there to connect to who the team is. An active listener will be able to learn a *lot* of practical information from a healthy stand-up about what the team is struggling with, they will probably be able to guess the roles people are playing on the team, and for the most part they should have heard the names of the team.
+ 
+ Stand-up is like any ritual though, and without paying attention it can deliver a *lot* less than its intended value. Some common problems:
+ 
+   - *Team members feel the need to detail absolutely everything that happened since the last stand-up.* This usually happens because team members are confusing a stand-up meeting with a "status meeting". If this is happening frequently, its possible that the project board isn't fulfilling its role as representing the true state of what's going on with the team. This can also be an indication that team members believe that they will be judged harshly if they do not demonstrate "business". Improving clarity of how progression works should alleviate this concern.
+   - *Team members "filibuster" and monopolize the time.* This can be a difficult problem to unwind, and hopefully some minor direct suggestions can alleviate this issue. Sometimes this can be persistent, and more innovative techniques can be tried. Its worth recounting that the underlying reason that the "stand-up" meeting is titled as such is because "standing-up" was intended to be a natural timer... people stand up, and after about ten minutes of that they want to sit down and end the meeting. Some teams have added additional parameters (after discovering this soft incentive was not quite enough) - they added a "stand-up token" that firmly established the "only the person with the token is allowed to talk" (a very empowering technique to make sure everyone gets their time)... and they made the "stand-up token" *heavy*. By making the token heavy, they signalled to the speaker that things should move faster. While these techniques clearly can't work for all teams, that spirit of innovation is to be encouraged.
+   - *Stand-up is an unwelcoming environment, and guests/outsiders are discouraged from participating.* This can be a tough nut to crack, because it speaks to the team's culture and the purpose of the meeting. Leadership is key here - make sure the team understands why stand-up is important and distinct from other team rituals and processes. Make an effort to regularly include someone unexpected in stand-up to teach the team that being straightforward and welcoming is important.
+   - *Stand-up does not start until xyz person has arrived* Because stand up is not intended to be mechanically necessary, it is inappropriate for a stand-up to be cancelled because specific people will not be in attendance. It is also inappropriate to wait for more than a minute to get started. The meeting style should be clear and simple enough that every member of the team can run it. Of course, if team members do not attend stand-up or disrespect the ritual by showing up dramatically late, then the team will have to coach those members on etiquette. Consider setting an alarm to get stand-up moving, so that the nature of the ritual will be de-personalized and feel more immediate.
+   - *Stand-up needs a predetermined leader.* This really is counter to the intent of the ritual. When it happens, it can tend to evolve from teams with remote members - having a shot caller can make it easier to deal with remote participants. If this is happening, experiment with rotating the "master of ceremonies" role each stand-up. You can also experiment with ways to eliminate the role entirely (passing a virtual token, for example). The more a predetermined leader is necessary though, the more likely the meeting will devolve into a status meeting.  
+ 
  ### Improving Discipline Elasticity
  ### Improving Personal Collaboration Discretion
  ### Improving Comprehensible Work Plan
