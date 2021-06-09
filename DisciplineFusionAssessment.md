@@ -182,7 +182,7 @@ Properly understood, this model is and must be a shared artifact that all discip
    - The project board is in a location that is rarely trafficked by the team, and thus people rarely look at it incidentally.
    -  The team is undisciplined in keeping the board up to date, and thus it actually provides a false indication of the current work of the team.
    - The stories are unclear, and therefore mislead the reader as to what is happening
-   - The board is not big, visible, simply, or persistent enough to "read well" as an overview
+   - The board is not big, visible, simple, or persistent enough to "read well" as an overview
  
  Seem familiar? These kind of problems tend to be "forgettable" problems... they're frequently not painful enough to remember to address or attempt to fix them. Because of that nature, teams can operate for a long time with dysfunctional or low-value project boards and they can easily fall into the trap of "this is just how we do it". Because the project board is fundamentally a communication tool for the project, its should be owned by the team's "delivery" discipline, and thus they should regularly test that its producing the intended results - "line of sight".
  
