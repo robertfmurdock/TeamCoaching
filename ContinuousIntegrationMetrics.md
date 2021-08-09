@@ -239,6 +239,7 @@ Sometimes just answering these questions will suggest how things can be improved
   - Maybe there is no process by which a team member becomes a reviewer, and thus the reviewer pool is too small.
   - Maybe the review team had no formal expectation on responsiveness and was thus acting inconsistently
   - Maybe the reviews are not assigned and thus the review team only performs reviews when they think to check the queue 
+
 Fixing the obvious holes in the process should help streamline the BFCR process.
 
 ##### Non-blocking Formal Code Review
