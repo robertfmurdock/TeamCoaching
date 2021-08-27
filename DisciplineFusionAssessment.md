@@ -186,7 +186,7 @@ Properly understood, this model is and must be a shared artifact that all discip
  
  Seem familiar? These kind of problems tend to be "forgettable" problems... they're frequently not painful enough to remember to address or attempt to fix them. Because of that nature, teams can operate for a long time with dysfunctional or low-value project boards and they can easily fall into the trap of "this is just how we do it". Because the project board is fundamentally a communication tool for the project, its should be owned by the team's "delivery" discipline, and thus they should regularly test that its producing the intended results - "line of sight".
  
- But work visualization isn't everything. Teams are made up of humans, and humans have other dimensions than is represented on a story. Another tool that is typically engaged in order to improve "line of sight" is creating a "stand-up meeting" ritual.
+ But work visualization isn't everything. Teams are made up of humans, and humans have other dimensions than are represented on a story. Another tool that is typically engaged in order to improve "line of sight" is creating a "stand-up meeting" ritual.
  
  The "stand-up" ritual is a flexible ritual created to achieve the following goals:
  
