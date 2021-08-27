@@ -69,7 +69,7 @@ ways to improve. This section will consider each of the tests, and make suggesti
 
 ### Improving Access Time
 
-Having fast access to team members is a major factor in team performance and success - the sooner misconceptions can be corrected, debates can be aired, and work converged, the easier it is to give a project a unified, coherent voice. The principle of continuous integration applies to concepts, design, and language just as much as it applied to technical components.
+Having fast access to team members is a major factor in team performance and success - the sooner misconceptions can be corrected, debates can be aired, and work converged, the easier it is to give a project a unified, coherent voice. The principle of continuous integration applies to concepts, design, and language just as much as it applies to technical components.
 
 Given this, a common solution for access problems is to co-locate the entire team, and have a norm of working from the co-located space a super-majority of the time. By at least getting people into the same space, you have removed the first barrier of inaccessibility - "out of sight, out of mind".
 
